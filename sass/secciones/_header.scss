@@ -1,0 +1,133 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 800px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  color: #fff;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),
+      url('../../images/computer.jpg');
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+    z-index: -1;
+  }
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__paragraph {
+    margin-bottom: 30px;
+  }
+}
+
+// NAV
+
+.nav.navbarfixed {
+  background: #0b7eea;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.nav {
+  background: #0b7eeaf2;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  transition: background-color 0.2s ease;
+  position: fixed;
+
+  &__title {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    margin-left: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+  }
+
+  &__items {
+    list-style: none;
+  }
+
+  &__links {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 13px 15px;
+  }
+
+  &__span {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-bottom: 3px solid black;
+    border-radius: 30%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+      border-bottom: 3px solid white;
+      filter: drop-shadow(1px 1px 10px rgb(255, 255, 255));
+      transform: translateY(0);
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 40px;
+  }
+
+  //   Para esconder los iconos del menu
+
+  &__menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+  }
+
+  &__close {
+    display: var(--show, none);
+  }
+}
+
+// HERO CONTAINER
+
+.hero__container {
+  max-width: 800px;
+  min-height: 650px;
+  display: grid;
+  align-content: center;
+  gap: 1em;
+  padding-bottom: 100px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+// SCROLL NAVBAR FIJO

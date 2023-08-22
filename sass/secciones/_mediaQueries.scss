@@ -1,0 +1,210 @@
+@media (max-width: 1100px) {
+  /* HEADER */
+
+  .nav__menu {
+    display: block;
+  }
+
+  .nav__link--menu {
+    position: fixed;
+    background: linear-gradient(280deg, #c8c8e7f7, rgba(11, 126, 234, 0.963));
+    top: 80px;
+    right: 0px;
+    height: 1000px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s opacity;
+    border-radius: 10px;
+    border-left: 2px solid rgba(0, 0, 0, 0.386);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.386);
+  }
+
+  .nav__links {
+    filter: drop-shadow(2px 2px 5px black);
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .nav__link--show {
+    --show: block;
+    opacity: 1;
+    pointer-events: unset;
+  }
+
+  .nav__close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 30px;
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 5px black);
+  }
+
+  /* ABOUT */
+
+  .about__main {
+    gap: 2em;
+  }
+
+  .about__icons:last-of-type {
+    grid-column: 1/ -1;
+  }
+
+  /* KNOWLEDGE */
+
+  .knowledge__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 3em;
+    text-align: center;
+  }
+
+  .knowledge__picture {
+    grid-row: 1/2;
+    justify-self: center;
+  }
+
+  /* TESTIMONY */
+
+  .testimony__container {
+    grid-template-columns: 30px 1fr 30px;
+  }
+
+  .testimony__body {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    gap: 3em;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .testimony__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* QUESTIONS */
+
+  .questions__copy {
+    width: 100%;
+  }
+
+  /* FOOTER */
+
+  .footer__hr {
+    opacity: 1;
+    width: 100%;
+    border-top: 0.1px solid #fff;
+    margin: 10px;
+  }
+
+  .footer__container {
+    flex-wrap: wrap;
+  }
+
+  .nav--footer {
+    width: 100%;
+    justify-items: center;
+  }
+
+  .nav__link--footer {
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .footer__form {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .footer__input {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .nav__link--menu {
+    right: 25px;
+  }
+
+  .hero_paragraph {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1.9rem;
+  }
+
+  .nav__link--menu {
+    width: 90%;
+  }
+
+  .nav__links {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* PRICE */
+
+  .price__element {
+    width: 90%;
+  }
+
+  .price__element--best {
+    width: 90%;
+    padding: 40px;
+  }
+
+  /* TESTIMONY */
+
+  .testimony__container {
+    grid-template-columns: 28px 1fr 28px;
+    gap: 0.9em;
+  }
+
+  .testimony {
+    --padding-container: 60px 0;
+  }
+
+  /* CUESTIONS */
+
+  .cuestions__title {
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+
+  .nav__link--footer {
+    justify-content: space-between;
+  }
+
+  .footer__title {
+    justify-self: start;
+  }
+
+  .footer__inputs {
+    flex-wrap: wrap;
+  }
+
+  .footer__input {
+    flex-basis: 100%;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  .footer__submit {
+    width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "mia",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --watch --config"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^3.28.0"
+  },
+  "main": "rollup.config.js",
+  "description": ""
+}
